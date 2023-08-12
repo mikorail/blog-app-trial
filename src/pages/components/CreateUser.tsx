@@ -41,7 +41,7 @@ function CreateUserForm({ onUserCreate }: CreateUserFormProps) {
   };
 
   return (
-    <Paper padding="sm" shadow="xs" radius="md" mt="lg">
+    <Paper p="sm" shadow="xs" radius="md" mt="lg">
       <Text size="lg" weight={700} mb="lg">
         Create User
       </Text>
