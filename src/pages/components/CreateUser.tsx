@@ -46,7 +46,7 @@ function CreateUserForm({ onUserCreate }: CreateUserFormProps) {
         Create User
       </Text>
       <Input
-        label="Name"
+        aria-label="Name"
         value={name}
         onChange={(event) => setName(event.currentTarget.value)}
         placeholder="Name"
@@ -55,7 +55,7 @@ function CreateUserForm({ onUserCreate }: CreateUserFormProps) {
         className="mb-2"
       />
       <Input
-        label="Email"
+        aria-label="Email"
         value={email}
         onChange={(event) => setEmail(event.currentTarget.value)}
         placeholder="Email"

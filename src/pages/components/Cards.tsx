@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Card, Text, Badge, Button, Group } from '@mantine/core';
 import Link from 'next/link';
@@ -16,7 +17,7 @@ interface CardsProps {
 export default function Cards({ posts }: CardsProps) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
-      {posts.map((post) => (
+      {posts?.map((post) => (
         <Card
           key={post.id}
           shadow="xs" // Adjust the shadow to make the card smaller

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { fetchPosts } from './api/api';
 import Cards from './components/Cards';
-import { HeaderMiddle } from './components/Navbars';
+import { HeaderMiddleTry } from './components/Navbars';
 import Layout from '@/components/layout';
 
 interface Post {

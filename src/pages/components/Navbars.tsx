@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { createStyles, Header, Group, ActionIcon, Container, Burger, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-// import { MantineLogo } from '@mantine/ds';
-// import { ActionToggle } from './Darktoggle';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -70,12 +68,12 @@ interface HeaderMiddleProps {
   links: { link: string; label: string }[];
 }
 
-export function HeaderMiddle({ links }: HeaderMiddleProps) {
+export function HeaderMiddleTry({ links }: HeaderMiddleProps) {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState(links?.[0].link);
   const { classes, cx } = useStyles();
 
-  const items = links.map((link) => (
+  const items = links?.map((link) => (
     <a
       key={link.label}
       href={link.link}
@@ -115,3 +113,5 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
     </Header>
   );
 }
+
+export default HeaderMiddleTry

@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import React, { useEffect, useState } from 'react';
 import { fetchUsers, createUser, updateUser, deleteUser, searchUsers } from '../api/api';
-import Tables from "../components/TableS";
+import Tables from "../components/Tables";
 import { useMediaQuery } from '@mantine/hooks';
 import { useForm } from '@mantine/form';
 import { Container,Input,Button } from '@mantine/core';
@@ -99,7 +99,7 @@ const isMobile = useMediaQuery('(max-width: 767px)');
 
   return (
     <Container>
-    <div className={`p-4 flex ${isMobile ? 'flex-col-reverse' : 'flex-row'} section-1`}>
+    <div className={`p-4 flex ${isMobile ? 'flex-col-reverse' : 'flex-row'} section-user`}>
       <div className={`w-full lg:w-${isMobile ? 'full' : '1/3'} pr-4`}>
         <h2>All Users</h2>
         <div className="mb-4 flex items-center space-x-2">

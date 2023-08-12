@@ -5,6 +5,22 @@ import { Text, Loader, Notification, Paper, Divider, Container } from '@mantine/
 import { fetchPostById, fetchCommentsByPostId } from '../api/api';
 // import { Comment, Post } from '../types'; // Make sure to import the proper types
 
+
+interface Post {
+    id: number;
+    title: string;
+    body: string;
+    user_id: number;
+}
+
+interface Comment {
+    id: number;
+    post_id:number;
+    name: string;
+    email: string;
+    body: string;
+  }
+
 export default function PostDetail() {
   const router = useRouter();
   const { id } = router.query;
@@ -74,7 +90,7 @@ export default function PostDetail() {
         </Paper>
       )}
 
-      {comments.length > 0 ? (
+      {comments?.length > 0 ? (
         <div className="mt-4">
           <Text size="lg" weight={500} mt="lg">
             Comments:
