@@ -21,8 +21,8 @@ export default function Layout({children, title}: LayoutProps){
     return (
         <>
             <Head>
-                <title>{title}</title>
-                <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+            <h1>{title || 'Post not found'}</h1>
+            <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             </Head>
             <NavbarMenu links={transformedLinks}/>
             {children}

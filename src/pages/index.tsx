@@ -18,16 +18,6 @@ export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const links = [
-    { title: 'Home', url: '/' },
-    { title: 'Users', url: '/users' },
-    // Add more links as needed
-  ];
-  const transformedLinks = links.map(link => ({
-    label: link.title,
-    link: link.url,
-  }));
-
   useEffect(() => {
     async function getPosts() {
       try {

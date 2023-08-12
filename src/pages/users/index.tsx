@@ -98,6 +98,7 @@ const isMobile = useMediaQuery('(max-width: 767px)');
 
 
   return (
+    <Layout title="Users Management Menu">
     <Container>
     <div className={`p-4 flex ${isMobile ? 'flex-col-reverse' : 'flex-row'} section-user`}>
       <div className={`w-full lg:w-${isMobile ? 'full' : '1/3'} pr-4`}>
@@ -127,6 +128,6 @@ const isMobile = useMediaQuery('(max-width: 767px)');
       </div>
     </div>
   </Container>
-  
+  </Layout>
   );
 }

@@ -1,3 +1,4 @@
+import Layout from "@/components/layout";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Text, Loader, Notification, Paper, Divider, Container } from '@mantine/core';
@@ -76,8 +77,9 @@ export default function PostDetail() {
   }
 
   return (
+    <Layout title={post ? post.title : 'Post not found'}>
     <Container>
-      {post && (
+      {post ? (
         <Paper shadow="xs" p="md" className="mb-4">
           <Text size="xl" weight={700}>
             {post.title}
@@ -88,8 +90,12 @@ export default function PostDetail() {
           <Divider />
           <Text className="mt-3">{post.body}</Text>
         </Paper>
+      ) : (
+        <Text size="xl" weight={700} mt="lg">
+          Post not found
+        </Text>
       )}
-
+  
       {comments?.length > 0 ? (
         <div className="mt-4">
           <Text size="lg" weight={500} mt="lg">
@@ -117,5 +123,7 @@ export default function PostDetail() {
         </Text>
       )}
     </Container>
+  </Layout>
+  
   );
 }
