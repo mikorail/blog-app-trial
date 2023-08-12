@@ -62,7 +62,7 @@ export default function PostDetail() {
   return (
     <Container>
       {post && (
-        <Paper shadow="xs" padding="md" className="mb-4">
+        <Paper shadow="xs" p="md" className="mb-4">
           <Text size="xl" weight={700}>
             {post.title}
           </Text>
