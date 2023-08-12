@@ -15,6 +15,16 @@ interface Post {
 
 
 export default function Home() {
+  const links = [
+    { title: 'Home', url: '/' },
+    { title: 'Users', url: '/users' },
+    // Add more links as needed
+  ];
+  const transformedLinks = links.map(link => ({
+    label: link.title,
+    link: link.url,
+  }));
+  
   const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
